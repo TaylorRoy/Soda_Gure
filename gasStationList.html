@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="apple-touch-icon" sizes="180x180" href="./assets/images/favicon_package_v0.16/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon_package_v0.16/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="./assets/images/favicon_package_v0.16/favicon-16x16.png">
+	<link rel="manifest" href="./assets/images/favicon_package_v0.16/site.webmanifest">
+	<meta name="msapplication-TileColor" content="#2b5797">
+	<meta name="theme-color" content="#ffffff">
+	<script src="https://www.gstatic.com/firebasejs/5.5.0/firebase.js"></script>
+
+	<title>Gas Station List</title>
+	<!--Jquery-->
+	<script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+
+	<!--bootstrap link-->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+	 crossorigin="anonymous">
+	<!-- adding css style sheet -->
+	<link rel="stylesheet" href="./assets/css/style.css">
+
+
+
+
+</head>
+
+<body class="gasStationList">
+	<div class="loading-gif-wrapper">
+		<h3>Loading current location</h3>
+		<img id="loading-gif" style="-webkit-user-select: none;" src="https://upload.wikimedia.org/wikipedia/commons/b/b1/Loading_icon.gif">
+	</div>
+	<nav class="navbar navbar-expand-md navbar-fixed-top navbar-dark bg-dark main-nav">
+		<div class="container">
+			<ul class="nav navbar-nav mx-auto">
+				<li class="nav-item">
+					<a class="nav-link" href="./mainPage.html">Home</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="./about.html">About</a>
+				</li>
+			</ul>
+			<ul class="nav navbar-nav mx-auto">
+				<li class="nav-item">
+					<a class="navbar-brand" href="#">Soda Guru</a>
+				</li>
+			</ul>
+			<ul class="nav navbar-nav mx-auto">
+				<li class="nav-item active">
+					<a class="nav-link" href="./gasStationList.html">Gas Stations</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="./sodaForm.html">Syrups</a>
+				</li>
+			</ul>
+		</div>
+	</nav>
+	<div class="container">
+		<div class="row mt-5">
+			<div class="col-lg-6 pt-5">
+				<div class="card">
+					<div class="card-header">
+						Stations near me
+					</div>
+					<ul class="list-group list-group-flush gas-station-list">
+
+					</ul>
+				</div>
+			</div>
+			<div class="col-lg-6">
+				<h3>My Google Maps Demo</h3>
+				<div id="map"></div>
+			</div>
+		</div>
+	</div>
+
+	<div id="available-syrups"></div>
+
+
+	<br>
+	<br>
+
+	<footer class="footer">
+		<div class="container">
+			<span> Copyright @ 2018</span>
+		</div>
+	</footer>
+
+	<script type="text/javascript" src="config.js"></script>
+	<script src="./assets/javascript/app.js"></script>
+	<script src="./assets/javascript/sodaForm.js"></script>
+
+	<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD1OUTs9dglCHpQLJf6UOJWECwTMC4W-lY">
+	</script>
+</body>
+
+</html>
